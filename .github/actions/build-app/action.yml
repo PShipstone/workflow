@@ -4,17 +4,10 @@ inputs:
   app_name:
     required: true
     type: string
-    
-#secrets:
-#  password:
-#    required: true
-        
+         
 runs:
   using: composite
 
   steps:
-    #- name: Checkout
-    #  uses: actions/checkout@v3
-
     - name: Build
       run: echo ${{inputs.app_name}} app built!
