@@ -1,20 +1,20 @@
-on:
-  workflow_call:
-    inputs:
-      app_name:
-        required: true
-        type: string
-    secrets:
-      password:
-        required: true
+name: Build Application
+
+inputs:
+  app_name:
+    required: true
+    type: string
+    
+#secrets:
+#  password:
+#    required: true
         
-jobs:
-  build:
-    name: Build Application
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        
-      - name: Build
-        run: echo ${{inputs.app_name}} app built!
+runs:
+  using: composite
+
+  steps:
+    #- name: Checkout
+    #  uses: actions/checkout@v3
+
+    - name: Build
+      run: echo ${{inputs.app_name}} app built!
