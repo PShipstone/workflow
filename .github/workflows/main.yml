@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    uses: ./.github/actions/build-app@v1
+    uses: ./.github/actions/build-app/action.yml
     with:
       app-name: hello-world
     #secrets:
