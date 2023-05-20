@@ -11,4 +11,4 @@ runs:
   steps:
     - name: Build
       shell: bash
-      run: echo ${{inputs.app_name}} app built!
+      run: echo ${{ inputs.app-name }} app built!
