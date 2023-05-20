@@ -10,14 +10,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
+    uses: octo-org/example-repo/.github/workflows/reusable-workflow.yml@main
+    with:
+      app-name: hello-world
+    secrets:
+      password: P455W0RD    
 
-      - name: Run a one-line script
-        run: echo Hello, world!
 
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      #- name: Run a multi-line script
+      #  run: |
+      #    echo Add other actions to build,
+      #    echo test, and deploy your project.
