@@ -13,8 +13,8 @@ jobs:
     uses: ./.github/workflows/actions/build
     with:
       app-name: hello-world
-    secrets:
-      password: P455W0RD    
+    #secrets:
+    #  password: P455W0RD    
 
 
       #- name: Run a multi-line script
