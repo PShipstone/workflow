@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    uses: octo-org/example-repo/.github/workflows/template/build/action.yml@main
+    uses: octo-org/example-repo/.github/workflows/template/build@main
     with:
       app-name: hello-world
     secrets:
