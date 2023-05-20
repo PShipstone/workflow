@@ -1,7 +1,7 @@
 name: Build Application
 
 inputs:
-  app_name:
+  app-name:
     required: true
     type: string
          
