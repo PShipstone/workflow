@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    uses: ./.github/workflows/build-app.yml
+    uses: pshipstone/workflow/.github/actions/build-app@main
     with:
       app-name: hello-world
     #secrets:
