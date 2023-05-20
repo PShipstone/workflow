@@ -17,7 +17,7 @@ jobs:
       - name: Build app
         uses: ./.github/actions/build-app
         with:
-          app-name: hello-world
+          app-name: 'hello-world'
     #secrets:
     #  password: P455W0RD    
 
