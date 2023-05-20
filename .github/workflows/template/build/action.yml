@@ -1,1 +1,10 @@
-
+on:
+  workflow_call:
+    inputs:
+      phrase:
+        required: true
+        type: string
+    secrets:
+      password:
+        required: true
+    
