@@ -14,10 +14,14 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-      - name: Build app
+      - name: Build hello-world app
         uses: ./.github/actions/build-app
         with:
           app-name: 'hello-world'
+      - name: Build hello-2-world app
+        uses: ./.github/actions/build-app
+        with:
+          app-name: 'hello-2-world'          
     #secrets:
     #  password: P455W0RD    
 
