@@ -18,6 +18,10 @@ jobs:
         uses: ./.github/actions/build-app
         with:
           app-name: 'hello-world'
+          
+  DeployDev:
+    runs-on: ubuntu-latest
+    steps:
       - name: Build hello-2-world app
         uses: ./.github/actions/build-app
         with:
