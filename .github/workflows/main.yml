@@ -26,13 +26,23 @@ jobs:
     steps:
       - name: Build
         shell: bash
-        run: echo ${{ inputs.app-name }} app built!         
+        run: echo Deploying ${{ inputs.app-name }} to dev         
 
-  TstDeploy:
+  tst-deploy:
     runs-on: ubuntu-latest
     needs: [dev-deploy]
     environment: Tst
     steps:
       - name: Build
         shell: bash
-        run: echo ${{ inputs.app-name }} app built! 
+        run: echo Deploying ${{ inputs.app-name }} to tst
+        
+
+  prd-deploy:
+    runs-on: ubuntu-latest
+    needs: [tst-deploy]
+    environment: Prd
+    steps:
+      - name: Build
+        shell: bash
+        run: echo Deploying ${{ inputs.app-name }} to prd        
