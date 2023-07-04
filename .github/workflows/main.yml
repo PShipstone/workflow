@@ -22,11 +22,3 @@ jobs:
         uses: ./.github/actions/build-app
         with:
           app-name: 'hello-2-world'          
-    #secrets:
-    #  password: P455W0RD    
-
-
-      #- name: Run a multi-line script
-      #  run: |
-      #    echo Add other actions to build,
-      #    echo test, and deploy your project.
