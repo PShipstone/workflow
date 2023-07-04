@@ -21,8 +21,8 @@ jobs:
           
   DeployDev:
     runs-on: ubuntu-latest
+    needs: [build]
     steps:
-      - name: Build hello-2-world app
-        uses: ./.github/actions/build-app
-        with:
-          app-name: 'hello-2-world'          
+      - name: Build
+        shell: bash
+        run: echo ${{ inputs.app-name }} app built!         
